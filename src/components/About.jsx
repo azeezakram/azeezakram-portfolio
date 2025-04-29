@@ -1,21 +1,47 @@
-import React from "react";
-
-
+import React from 'react';
 
 const About = () => {
   return (
     <>
-        <div className="flex flex-col w-[100%] min-w-[300px] h-[600px] md:h-[700px] lg:h-[700px] xl:h-[700px] justify-around items-center md:flex-row lg:flex-row xl:flex-row mx-auto mt-10 md:mt-0 lg:mt-0 xl:mt-0 " id="hero">
-            <div className="flex flex-col gap-y-3 xl:gap-y-5 mx-auto">
-                <div className="flex">
-                    <div className="h-[100] w-[2px] bg-gray-500 mr-4"></div>
-                    <h1 className="text-[3rem] xl:text-6xl text-nowrap leading-14 xl:leading-17">ABOUT<br/>ME<span className="text-cyan-400">.</span></h1>
-                </div>
-                
+      <section className='backdrop-blur-3xl'>
+        <div
+          className='flex flex-col md:flex-row lg:flex-row xl:flex-row w-full min-h-[700px] xl:max-w-[1300px] mx-auto justify-center items-center md:justify-start lg:justify-start xl:justify-end '
+          id='about'>
+          {/* Decorative line and heading */}
+          <div className='flex flex-col px-6 gap-y-6 xl:gap-y-8 max-w-2xl ml-auto text-justify md:px-0 lg:px-0 xl:px-0 '>
+            <div className='flex  xl:flex-row-reverse '>
+              <div className='h-[100] w-[2px] bg-gray-500 mr-4 ml-0 md:mr-0 lg:mr-0 xl:mr-0 md:ml-4'></div>
+              <h1 className='text-[2.8rem] font-[500] xl:text-6xl text-nowrap leading-14 xl:leading-17'>
+                ABOUT <br />
+                ME<span className='text-cyan-400'>,</span>
+              </h1>
             </div>
+
+            <div className='space-y-4'>
+              <p className='text-gray-300 text-base md:text-lg leading-relaxed md:text-justify lg:text-justify xl:text-justify'>
+                I'm Abdul Azeez, a passionate and driven Full-Stack Software
+                Engineer with a strong commitment to building innovative and
+                impactful digital solutions.
+              </p>
+
+              <p className="font-['Quicksand'] text-gray-400 text-sm md:text-base leading-relaxed md:text-justify lg:text-justify xl:text-justify">
+                My journey in software development began with the completion of
+                my Higher National Diploma in Computing and Software Engineering
+                at ICBT Campus, where I built a strong foundation in both
+                frontend and backend development. I am currently pursuing a
+                top-up programme for a BSc (Hons) in Software Engineering to
+                further enhance my skills. Driven by a passion for technology
+                and continuous learning, I aim to deliver solutions that are
+                robust, user-centric, and impactful. I believe in combining
+                creativity, precision, and problem-solving to contribute
+                meaningfully to the evolving digital world.
+              </p>
+            </div>
+          </div>
         </div>
+      </section>
     </>
   );
-}
+};
 
 export default About;
