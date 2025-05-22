@@ -1,7 +1,7 @@
 import React from 'react';
 
 import gridBg from '../assets/images/grid-bg.png'
-import myImageColor from '../assets/images/my-image-color.png';
+// import myImageColor from '../assets/images/my-image-color.png';
 import siteLogoSlogan from '../assets/images/logo-slogan.svg';
 import myResume from '../assets/documents/my-resume.pdf';
 import {
