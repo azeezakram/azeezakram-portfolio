@@ -46,6 +46,7 @@ function App() {
 		<>
 			<div className='fixed inset-0 radial-gradient-animation -z-10'></div>
 			<div className='fixed inset-0 bg-[#171719] -z-20'></div>
+			
 			<div className='relative'>
 				<Navbar />
 				<Hero />

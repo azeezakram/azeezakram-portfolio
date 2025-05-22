@@ -1,41 +1,47 @@
+import { React, ReactComponent, useEffect } from 'react';
 import { CgMenuRight } from 'react-icons/cg';
-import siteLogo from '../assets/images/logo-bl.png';
+import siteLogoFull  from '../assets/images/logo-full.svg';
+import siteLogoSlogan from '../assets/images/logo-slogan.svg';
 import { useState } from 'react';
 import MobileMenu from '../components/MobileMenu';
 
+
 export default function Navbar() {
 	const [menuClicked, setMenuClicked] = useState(false);
+	const [scrolled, setScrolled] = useState(false);
+	
 
-	window.addEventListener('scroll', () => {
-		const navWrapper = document.querySelector('nav');
-		const navElement = document.querySelector('#header');
-		const logo = document.querySelector('#logo');
+	useEffect(() => {
+		const handleScroll = () => {
+			const isScrolled = window.scrollY > 0;
+			setScrolled(isScrolled);
+		};
 
-		if (window.scrollY > 0) {
-			navElement.classList.remove('xl:h-[80px]');
-			navElement.classList.add('xl:h-[60px]');
-			navWrapper.classList.add('bg-black/15');
-			logo.classList.add('xl:h-[30px]')
-		} else {
-			navWrapper.classList.remove('bg-black/15');
-			navElement.classList.add('xl:h-[80px]');
-			navElement.classList.remove('xl:h-[60px]');
-		}
-	});
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
 
 	return (
 		<>
-			<nav className='sticky top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-800 ease-in-out'>
+			<nav className={`sticky top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-800 ease-in-out ${scrolled ? 'bg-black/15': ''}`}>
 				<div
-					className='flex min-w-[300px] w-full xl:w-[1500px] m-auto h-[80px] px-3 justify-between  items-center lg:px-5 xl:h-[80px] transition-all duration-300 ease-in-out'
+					className={`flex min-w-[300px] w-full xl:w-[1500px] m-auto  px-3 justify-between  items-center lg:px-5  transition-all duration-300 ease-in-out ${scrolled ? 'h-[60px] xl:h-[60px]': 'h-[70px] xl:h-[80px]'}`}
 					id='header'>
-					<div className='flex justify-start text-3xl xl:w-full'>
-						<a href='#hero'>
-							<img
-								src={siteLogo}
-								className='h-[35px] m-1 hover:animate-pulse xl:h-[40px]'
+					<div className='flex justify-start text-3xl w-full'>
+						<a href='#hero' className='min-w-[95px]'>
+							{scrolled ? 
+								<img
+								src={siteLogoSlogan}
+								className={`h-[28px] m-1 hover:animate-pulse ${scrolled ? 'xl:h-[28px]' : ''}`}
 								id='logo'
-							/>
+								/> :
+								<img
+								src={siteLogoFull}
+								className={`h-[23px] m-1 hover:animate-pulse ${scrolled ? 'xl:h-[28px]' : ''}`}
+								id='logo'
+								/>
+							}
 						</a>
 					</div>
 

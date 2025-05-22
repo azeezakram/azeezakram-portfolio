@@ -1,5 +1,8 @@
 import React from 'react';
+
+import gridBg from '../assets/images/grid-bg.png'
 import myImageColor from '../assets/images/my-image-color.png';
+import siteLogoSlogan from '../assets/images/logo-slogan.svg';
 import myResume from '../assets/documents/my-resume.pdf';
 import {
 	FaInstagram,
@@ -14,33 +17,29 @@ import { TbBrandWhatsapp } from 'react-icons/tb';
 const Hero = () => {
 	return (
 		<>
-			<section className='backdrop-blur-3xl'>
+			<section className='backdrop-blur-3xl relative overflow-hidden'>
+				<img src={gridBg} className='min-w-full h-[110%] absolute  z-8 opacity-4 object-cover' />
 				<div
-					className='flex items-center flex-col gap-y-[80px] relative w-full xl:w-[1500px] min-h-[700px] pt-[130px] min-w-[300px] md:h-[100px] lg:h-[700px] xl:h-[100vh] justify-center md:justify-around lg:justify-around xl:justify-center  md:flex-row lg:flex-row xl:flex-col mx-auto my-auto -mt-[80px] xl:-mt-[130px]'
+					className='flex items-center flex-col gap-y-[80px] relative w-full xl:w-[1500px] min-h-[700px] pt-[60px] min-w-[300px] md:h-[100px] lg:h-[700px] xl:h-[100vh] justify-center   md:flex-row lg:flex-row xl:flex-col mx-auto my-auto -mt-[80px] xl:-mt-[130px] px-6'
 					id='hero'>
-					<div className='flex flex-col gap-y-3 xl:gap-y-5  z-10 '>
-						<h1 className='text-[2.8rem] font-[400] xl:text-8xl text-nowrap leading-14 xl:leading-23 bg-gradient-to-r from-[#b8dbf2] to-gray-600 bg-clip-text text-transparent text-center'>
+					<div className='flex flex-col gap-y-2 md:gap-y-5  z-40 '>
+						<div className='mx-auto p-4 lg:p-5 border-2 rounded-3xl lg:rounded-4xl'>
+							<img className='h-[40px] lg:h-[60px]' src={siteLogoSlogan} alt='logo'/>
+						</div>
+						<h1 className='text-4xl font-[500] md:font-[400] md:text-6xl lg:text-7xl xl:text-8xl text-nowrap leading-14 xl:leading-23 bg-gradient-to-r from-[#b8dbf2] to-gray-600 bg-clip-text text-transparent text-center'>
 							I<span className='text-cyan-400'>'</span>m 
 							Abdul Azeez
 						</h1>
 
-						{/* <div className='flex'>
-							 <div className='h-[100] w-[2px] bg-gray-500 mr-4'></div>
-							<h1 className='text-[2.8rem] font-[500] xl:text-6xl text-nowrap leading-14 xl:leading-17 bg-gradient-to-r from-[#b8dbf2] to-gray-600 bg-clip-text text-transparent'>
-								I<span className='text-cyan-400'>'</span>m <br />
-								Abdul Azeez
-							</h1>
-						</div> */}
-
-						<p className="text-md xl:text-7xl text-gray-400  font-thin">
+						<p className="text-xl font-thin md:text-5xl lg:text-6xl xl:text-7xl text-gray-400  text-center">
 							Dedicated{' '}
-							<span className='font-[400] text-cyan-400'>
+							<span className='font-[400] text-cyan-400 text-nowrap'>
 								Software Engineer
 							</span>
 						</p>
 
 						<div className='flex items-center justify-start gap-6 w-[100%] mx-auto mt-1 md:mt-0 lg-mt-0 xl:mt-2'>
-							<div className='flex w-fit gap-x-2 [&>a>*]:fill-gray-400  [&>a>*]:transition-all  duration-300 ease-in-out [&>a>*]:text-2xl'>
+							<div className='flex w-fit gap-x-2 [&>a>*]:fill-gray-400  [&>a>*]:transition-all  duration-300 ease-in-out [&>a>*]:xl:text-2xl'>
 								<a
 									href='https://www.instagram.com/azeez_.akram/'
 									target='_blank'
