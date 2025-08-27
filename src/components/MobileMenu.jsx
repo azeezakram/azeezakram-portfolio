@@ -6,11 +6,11 @@ const MobileMenu = ({ menuClicked, setMenuClicked }) => {
 	return (
 		<>
 			<div
-				className={`absolute block  lg:hidden top-0 right-0 left-0 p-6 bg-[#191b20] h-[100vh] z-51 ${
+				className={` absolute block lg:hidden top-0 right-0 left-0 p-6 bg-[#171719] h-[100vh] z-51 ${
 					menuClicked
 						? 'translate-y-0 overflow-y-scroll'
 						: '-translate-y-1000'
-				} duration-800 ease-in-out`}>
+				} duration-1000 ease-in-out will-change-transform,opacity`}>
 				<div className=' top-4 -left-4 w-full h-[50px] flex justify-between items-center mb-8'>
 					<img
 						src={siteLogoSlogan}

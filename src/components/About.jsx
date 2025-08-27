@@ -1,4 +1,8 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const About = () => {
 	return (
@@ -8,16 +12,16 @@ const About = () => {
 					className='flex flex-col md:flex-row lg:flex-row xl:flex-row w-full min-h-[700px] xl:max-w-[1300px] mx-auto justify-center items-center md:justify-start lg:justify-start xl:justify-end '
 					id='about'>
 					
-					<div className='flex flex-col px-6 gap-y-10 xl:gap-y-8 max-w-2xl ml-auto text-justify  xl:px-0 '>
-						<div className='flex  md:flex-row-reverse '>
+					<div className='flex flex-col px-6 gap-y-10 xl:gap-y-8 max-w-2xl ml-auto text-justify  xl:px-0 ' >
+						<div className='flex  md:flex-row-reverse' data-aos="fade-left" data-aos-duration="1000" data-aos-easing="ease-in-out">
 							<div className='h-[100] w-[2px] bg-gray-500 mr-4 ml-0 md:mr-0 lg:mr-0 xl:mr-0 md:ml-4'></div>
-							<h1 className='text-[2.8rem] font-[500] xl:text-6xl text-nowrap leading-14 xl:leading-17 bg-gradient-to-r from-[#b8dbf2] to-gray-600 bg-clip-text text-transparent'>
+							<h1 className='text-[2.8rem] font-[200] xl:text-6xl text-nowrap leading-14 xl:leading-17 bg-gradient-to-r from-[#b8dbf2] to-gray-600 bg-clip-text text-transparent' >
 								About <br />
 								Me<span className='text-cyan-400'>.</span>
 							</h1>
 						</div>
 
-						<div className='space-y-4'>
+						<div className='space-y-4 font-[300]' data-aos="fade-right" data-aos-duration="1000" data-aos-delay='100' data-aos-easing="ease-in-out" >
 							<p className='text-gray-300 text-sm xl:text-[1rem] leading-relaxed md:text-justify lg:text-justify xl:text-justify'>
 								I'm Abdul Azeez, a passionate and driven
 								Full-Stack Software Engineer with a strong
@@ -25,7 +29,7 @@ const About = () => {
 								digital solutions.
 							</p>
 
-							<p className="font-['Quicksand'] text-gray-400 text-sm xl:text-base leading-relaxed md:text-justify lg:text-justify xl:text-justify">
+							<p className="text-gray-400 text-sm xl:text-base leading-relaxed md:text-justify lg:text-justify xl:text-justify">
 								My journey in software development began with
 								the completion of my{' '}
 								<b>
